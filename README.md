@@ -28,13 +28,34 @@ The applications have not been initialized yet.
 
 Planned commands after setup:
 
-### Frontend
+### Frontend Setup
+
+Prerequisites: Node.js and npm.
+
+From the repository root:
 
 ```bash
 cd frontend
-npm install
+npm ci
 npm run dev
 ```
+
+Open the local URL printed in the terminal. Press `Ctrl+C` to stop the server.
+
+### Frontend Checks
+
+Run these commands from `frontend/`:
+
+| Command | Purpose |
+|---|---|
+| `npm run lint` | Check ESLint rules |
+| `npm run typecheck` | Check TypeScript types |
+| `npm run format` | Format files with Prettier |
+| `npm run format:check` | Check formatting without changing files |
+| `npm run build` | Generate production files in `dist/` |
+| `npm run preview` | Preview the production build locally |
+
+The frontend currently contains the Vite starter with React, TypeScript, and Tailwind configured. Product pages and custom UI components are not implemented yet.
 
 ### Backend
 
@@ -58,3 +79,5 @@ These commands are placeholders until the respective setup issues are completed.
 6. Merge after checks and review pass.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+
